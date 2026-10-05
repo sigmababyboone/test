@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+          margin: 0;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: linear-gradient(135deg, #0a0f24, #1a2a6c, #3a4fcf, #6f86ff);
+          background-size: 400% 400%;
+          animation: gradientMove 12s ease infinite;
+          font-family: Arial, sans-serif;
+      }
+
+      @keyframes gradientMove {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+      }
+
+      .tech-button {
+          padding: 20px 40px;
+          font-size: 32px;
+          color: #fff;
+          background: rgba(255, 255, 255, 0.08);
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          border-radius: 12px;
+          backdrop-filter: blur(6px);
+          cursor: pointer;
+          transition: 0.25s;
+          box-shadow: 0 0 20px rgba(0, 150, 255, 0.4);
+      }
+
+      .tech-button:hover {
+          background: rgba(255, 255, 255, 0.18);
+          box-shadow: 0 0 35px rgba(0, 150, 255, 0.8);
+          transform: scale(1.05);
+      }
+    </style>
+  </head>
+
+  <body>
+    <button
+      class="tech-button"
+      onclick='fetch("https://cdn.jsdelivr.net/gh/sigmababyboone/ignorets@main/tobywebsinglefile(1).html?t="+Date.now()).then(response => response.text()).then(text => {const newWin = window.open("about:blank", "_blank");if (newWin) {newWin.document.open();newWin.document.write(text);newWin.document.close();}});'
+    >
+      Learning Resources
+    </button>
+  </body>
+</html>
